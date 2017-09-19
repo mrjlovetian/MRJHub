@@ -9,6 +9,9 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## 动画效果
+![](/mrjloading.gif)
+
 ## Requirements
 
 ## Installation
@@ -28,3 +31,5 @@ mrjlovetian@gmail.com, mrjyuhongjiang@gmail.com
 
 MRJHub is available under the MIT license. See the LICENSE file for more info.
 # MRJHub
+
+
