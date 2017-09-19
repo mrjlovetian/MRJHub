@@ -1,0 +1,6 @@
+framework module MRJHub {
+  umbrella header "MRJHub-umbrella.h"
+
+  export *
+  module * { export * }
+}
