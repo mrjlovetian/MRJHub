@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MRJLoadingView : UIView
-
+- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr;
 @end

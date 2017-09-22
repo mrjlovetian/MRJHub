@@ -14,26 +14,24 @@
 
 @implementation MRJLoadingView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr{
     self = [super initWithFrame:frame];
     if (self) {
-        [self initUI];
+        self.backgroundColor = [UIColor clearColor];
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.frame = self.frame;
+        [self addSubview:imageView];
+        imageView.center = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0);
+        if (srcArr.count > 0) {
+            imageView.animationImages = srcArr;
+        }else{
+            imageView.animationImages = [self anumationImages];
+        }
+        imageView.animationDuration = 3.0;
+        imageView.animationRepeatCount = NSIntegerMax;
+        [imageView startAnimating];
     }
     return self;
-}
-
-- (void)initUI
-{
-    self.backgroundColor = [UIColor clearColor];
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.frame = self.frame;
-    [self addSubview:imageView];
-    imageView.center = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0);
-    imageView.animationImages = [self anumationImages];
-    imageView.animationDuration = 3.0;
-    imageView.animationRepeatCount = NSIntegerMax;
-    [imageView startAnimating];
 }
 
 - (void)startAnimation{
@@ -58,9 +56,6 @@
     }
     return imageArr;
 }
-
-#pragma mark UI
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

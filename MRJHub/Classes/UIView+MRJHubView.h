@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (MRJHubView)
+
 - (void)MRJ_showMessage:(NSString *)msg;
 
 - (void)MRJ_showMessage:(NSString *)msg withDur:(NSTimeInterval)dur;
