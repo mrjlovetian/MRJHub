@@ -14,7 +14,7 @@
 
 @implementation MRJLoadingView
 
-- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr{
+- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -34,7 +34,7 @@
     return self;
 }
 
-- (void)startAnimation{
+- (void)startAnimation {
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = @(M_PI * 10);
     rotationAnimation.duration = 5;
@@ -42,13 +42,11 @@
     rotationAnimation.cumulative = NO;
     rotationAnimation.removedOnCompletion = NO;
     rotationAnimation.fillMode = kCAFillModeForwards;
-    
     [self.imageCircleImageView.layer addAnimation:rotationAnimation forKey:@"Rotation"];
 }
 
-- (NSArray *)anumationImages{
+- (NSArray *)anumationImages {
     NSMutableArray *imageArr = [NSMutableArray arrayWithCapacity:1];
-    
     for (int i = 1; i <= 44; i ++ ) {
         UIImage *image = nil;
         image = [[UIImage alloc] initWithContentsOfFile:[[NSBundle bundleForClass:[self class]] pathForResource:[NSString stringWithFormat:@"mrjloading00%d", i] ofType:@"png"]];
