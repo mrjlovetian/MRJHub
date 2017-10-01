@@ -24,7 +24,7 @@
         imageView.center = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0);
         if (srcArr.count > 0) {
             imageView.animationImages = srcArr;
-        }else{
+        } else {
             imageView.animationImages = [self anumationImages];
         }
         imageView.animationDuration = 3.0;

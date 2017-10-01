@@ -11,11 +11,11 @@
 #import "MBProgressHUD.h"
 
 @implementation UIView (MRJHubView)
-- (void)MRJ_showMessage:(NSString *)msg{
+- (void)MRJ_showMessage:(NSString *)msg {
     [self MRJ_showMessage:msg widthDur:3 edit:YES];
 }
 
-- (void)MRJ_showMessage:(NSString *)msg withDur:(NSTimeInterval)dur{
+- (void)MRJ_showMessage:(NSString *)msg withDur:(NSTimeInterval)dur {
     [self MRJ_showMessage:msg widthDur:dur edit:YES];
 }
 
@@ -23,7 +23,6 @@
     if ([msg isEqualToString:@""]) {
         return;
     }
-    
     MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:self animated:true];
     hub.mode = MBProgressHUDModeText;
     hub.detailsLabel.text = msg;
@@ -35,7 +34,7 @@
     [hub hideAnimated:YES afterDelay:dur];
 }
 
-- (void)MRJ_showDefaultAnimationLoading{
+- (void)MRJ_showDefaultAnimationLoading {
     [self MRJ_showtAnimationLoading];
 }
 
@@ -56,7 +55,7 @@
     hub.backgroundColor = [UIColor clearColor];
 }
 
-- (void)MRJ_hideView{
+- (void)MRJ_hideView {
     [MBProgressHUD hideHUDForView:self animated:YES];
 }
 
