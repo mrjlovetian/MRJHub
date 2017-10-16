@@ -11,6 +11,7 @@
 #import "MBProgressHUD.h"
 
 @implementation UIView (MRJHubView)
+
 - (void)MRJ_showMessage:(NSString *)msg {
     [self MRJ_showMessage:msg widthDur:3 edit:YES];
 }
