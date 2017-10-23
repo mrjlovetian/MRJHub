@@ -9,7 +9,9 @@
 #import "MRJLoadingView.h"
 
 @interface MRJLoadingView()
+
 @property (nonatomic, strong)UIImageView *imageCircleImageView;
+
 @end
 
 @implementation MRJLoadingView
