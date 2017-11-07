@@ -10,6 +10,7 @@
 
 @interface MRJLoadingView()
 
+/// 加载动画视图
 @property (nonatomic, strong)UIImageView *imageCircleImageView;
 
 @end
