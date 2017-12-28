@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MRJHub'
-  s.version          = '0.1.2.7'
+  s.version          = '0.1.2.8'
   s.summary          = '动态加载框，借助于MBProgressHUD写成的一个类别！'
 
 # This description is used to generate tags and improve search results.
