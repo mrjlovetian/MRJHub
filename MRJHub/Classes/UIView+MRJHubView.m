@@ -12,15 +12,15 @@
 
 @implementation UIView (MRJHubView)
 
-- (void)MRJ_showMessage:(NSString *)msg {
-    [self MRJ_showMessage:msg widthDur:3 edit:YES];
+- (void)MRJShowMessage:(NSString *)msg {
+    [self MRJShowMessage:msg widthDur:3 edit:YES];
 }
 
-- (void)MRJ_showMessage:(NSString *)msg withDur:(NSTimeInterval)dur {
-    [self MRJ_showMessage:msg widthDur:dur edit:YES];
+- (void)MRJShowMessage:(NSString *)msg withDur:(NSTimeInterval)dur {
+    [self MRJShowMessage:msg widthDur:dur edit:YES];
 }
 
-- (void)MRJ_showMessage:(NSString *)msg widthDur:(NSTimeInterval)dur edit:(BOOL)edit{
+- (void)MRJShowMessage:(NSString *)msg widthDur:(NSTimeInterval)dur edit:(BOOL)edit{
     if ([msg isEqualToString:@""]) {
         return;
     }
@@ -35,16 +35,16 @@
     [hub hideAnimated:YES afterDelay:dur];
 }
 
-- (void)MRJ_showDefaultAnimationLoading {
-    [self MRJ_showtAnimationLoading];
+- (void)MRJShowDefaultAnimationLoading {
+    [self MRJShowtAnimationLoading];
 }
 
-- (void)MRJ_showtAnimationLoading{
+- (void)MRJShowtAnimationLoading{
     MRJLoadingView *loadingView = [[MRJLoadingView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
-    [self MRJ_showLoadingCustomView:loadingView toView:self];
+    [self MRJShowLoadingCustomView:loadingView toView:self];
 }
 
-- (void)MRJ_showLoadingCustomView:(UIView *)customView toView:(UIView *)toView{
+- (void)MRJShowLoadingCustomView:(UIView *)customView toView:(UIView *)toView{
     MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:toView animated:YES];
     hub.minSize = [UIScreen mainScreen].bounds.size;
     if (customView) {
@@ -56,7 +56,7 @@
     hub.backgroundColor = [UIColor clearColor];
 }
 
-- (void)MRJ_hideView {
+- (void)MRJHideView {
     [MBProgressHUD hideHUDForView:self animated:YES];
 }
 

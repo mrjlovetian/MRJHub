@@ -24,6 +24,7 @@
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.frame = self.frame;
         [self addSubview:imageView];
+        
         imageView.center = CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0);
         if (srcArr.count > 0) {
             imageView.animationImages = srcArr;
@@ -37,6 +38,7 @@
     return self;
 }
 
+/// 动画设置
 - (void)startAnimation {
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = @(M_PI * 10);

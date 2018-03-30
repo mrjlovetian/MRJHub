@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "MRJHub.h"
 #import "MRJLoadingView.h"
 #import "UIView+MRJHubView.h"
 
