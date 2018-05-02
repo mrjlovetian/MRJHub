@@ -11,6 +11,6 @@
 @interface MRJLoadingView : UIView
 
 /// 初始化创建
-- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr;
+- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray <UIImage *>*)srcArr;
 
 @end

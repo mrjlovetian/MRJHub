@@ -17,7 +17,7 @@
 
 @implementation MRJLoadingView
 
-- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray *)srcArr {
+- (instancetype)initWithFrame:(CGRect)frame srcArr:(NSArray <UIImage *>*)srcArr {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
