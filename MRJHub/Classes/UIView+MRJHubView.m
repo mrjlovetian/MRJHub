@@ -44,7 +44,7 @@
 
 - (void)MRJShowLoadingCustomView:(UIView *)customView toView:(UIView *)toView{
     MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:toView animated:YES];
-    hub.minSize = [UIScreen mainScreen].bounds.size;
+//    hub.minSize = [UIScreen mainScreen].bounds.size;
     if (customView) {
         hub.mode = MBProgressHUDModeCustomView;
         hub.customView = customView;

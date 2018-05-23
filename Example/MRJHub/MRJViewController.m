@@ -8,6 +8,7 @@
 
 #import "MRJViewController.h"
 #import "UIView+MRJHubView.h"
+#import "MRJLoadingView.h"
 
 @interface MRJViewController ()
 
@@ -21,7 +22,8 @@
     
 //    [self.view MRJ_showMessage:@"我是小江江"];
     
-    [self.view MRJ_showDefaultAnimationLoading];
+    [self.view MRJShowDefaultAnimationLoading];
+//    [self.view MRJShowLoadingCustomView:[[MRJLoadingView alloc] initWithFrame:CGRectMake(0, 0, 90, 90) srcArr:nil] toView:self.view];
 //    [self.view MRJ_showMessage:@"kkk"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
